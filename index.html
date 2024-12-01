@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANDY</title>
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <style>
+        /* Load Custom Fonts */
+        @font-face {
+            font-family: 'BodyFont';
+            src: url('body_font.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'HeaderFont';
+            src: url('header_font_v2.ttf') format('truetype');
+        }
+
+        @font-face {
+            font-family: 'SubHeaderFont';
+            src: url('sub_header_font.ttf') format('truetype');
+        }
+
+        /* General Styling */
+        body {
+            background-image: url('background.jpg');
+            background-repeat: repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            color: #00ff00;
+            font-family: 'BodyFont', Arial, sans-serif;
+            font-size: 14px;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        /* Page Header */
+        .page-header {
+            color: #00ff00;
+            font-size: 72px;
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+            font-family: 'HeaderFont', Arial, sans-serif;
+        }
+
+        /* Profile Picture Section */
+        .profile-picture-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .profile-picture-section img {
+            border: 4px solid #00ff00;
+            border-radius: 5px;
+            width: 150px;
+            height: 150px;
+        }
+
+        /* Copy Text Section */
+        .copy-text-section {
+            text-align: center;
+            margin-top: 10px;
+            cursor: pointer;
+            color: #00ff00;
+            font-family: 'BodyFont', Arial, sans-serif;
+            font-size: 14px;
+            border: 1px solid #00ff00;
+            background-color: #000; /* Changed to black background */
+            padding: 5px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 5px;
+        }
+
+        .copy-text-section:hover {
+            background-color: #00ff00;
+            color: #000;
+        }
+
+        /* Navigation Section */
+        .nav-section {
+            width: 800px;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.85);
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .nav-link {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px;
+            color: #00ff00;
+            font-weight: bold;
+            text-decoration: none;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            font-family: 'SubHeaderFont', Arial, sans-serif;
+        }
+
+        .nav-link:hover {
+            background-color: #00ff00;
+            color: #000000;
+        }
+
+        /* About Me Section */
+        .about-section {
+            width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.85);
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+            color: #00ff00;
+            font-family: 'BodyFont', Arial, sans-serif;
+        }
+
+        .about-section h2 {
+            font-family: 'SubHeaderFont', Arial, sans-serif;
+        }
+
+        /* Blog Posts Section */
+        .post-section {
+            width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.85);
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+            color: #00ff00;
+            font-family: 'BodyFont', Arial, sans-serif;
+        }
+
+        .post-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-family: 'SubHeaderFont', Arial, sans-serif;
+        }
+
+        .post-content {
+            font-size: 16px;
+            font-family: 'BodyFont', Arial, sans-serif;
+        }
+
+        /* Footer */
+        .footer {
+            width: 800px;
+            text-align: center;
+            padding: 20px;
+            margin: 20px auto;
+            color: #00ff00;
+            background-color: rgba(0, 0, 0, 0.85);
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+            font-family: 'BodyFont', Arial, sans-serif;
+        }
+
+        /* Overlay Image */
+        .overlay-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('gifs/3.gif');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            pointer-events: none; /* Allows interaction with elements below the overlay */
+            z-index: 999;
+        }
+
+        /* Winamp Media Player Container */
+        media-theme-winamp {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Overlay Image -->
+    <div class="overlay-image"></div>
+
+    <!-- Page Header -->
+    <div class="page-header">MONEYBAND ANDY</div>
+
+    <!-- Profile Picture Section -->
+    <div class="profile-picture-section">
+        <img src="https://img1.picmix.com/output/pic/normal/5/0/2/3/12223205_944ff.gif" alt="Profile Picture" />
+    </div>
+
+    <!-- Copy Text Section -->
+    <div class="copy-text-section" onclick="copyToClipboard('Placeholder')">
+        Placeholder
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="nav-section">
+        <a href="https://x.com/MONEYBANDANDY" class="nav-link" target="_blank">Twitter</a>
+        <a href="https://dexscreener.com" class="nav-link" target="_blank">DexScreener</a>
+    </div>
+
+    <!-- About Me Section -->
+    <div class="about-section">
+        <h2>About Me</h2>
+        <p>In this country, you gotta make the money first. Then when you get the money, you get the power. Then when you get the power, then you get the women.....$$$$$</p>
+    </div>
+
+    <!-- Blog Post Section -->
+    <div class="post-section">
+        <div class="post-title">Text Post - November 30, 2024</div>
+        <div class="post-content">
+            <h3>ANDY</h3>
+            <p>This isn't gambling; this is me making moves only real winners understand. People are gonna call it shit, but guess what? Shit turns to gold when you've got balls this big.</p>
+            <p>#real #nigga</p>
+        </div>
+    </div>
+
+    <div class="post-section">
+        <div class="post-title">Quote Post - November 29, 2024</div>
+        <blockquote style="border-left: 4px solid #00ff00; padding-left: 10px;">
+            Motivation? I just jerk off all day and let serotonin drip into my asshole while gooning on my toilet.
+        </blockquote>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        &copy; 2024 - PU$$Y MONEY WEED
+    </div>
+
+    <!-- Winamp Media Player Section -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/player.style/winamp/+esm"></script>
+
+    <media-theme-winamp>
+        <audio
+            id="background-audio"
+            slot="media"
+            src="https://audio.jukehost.co.uk/W02VCFBUL1zrNA5gW7dLYJtyhgjL2F2b"
+            autoplay
+            loop
+            playsinline
+            crossorigin
+        ></audio>
+    </media-theme-winamp>
+
+    <!-- JavaScript for Copy Functionality and Audio Volume -->
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                alert('Copied: ' + text);
+            }, function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
+
+        // Set audio volume to 20% when the page loads
+        document.addEventListener('DOMContentLoaded', function () {
+            const audio = document.getElementById('background-audio');
+            if (audio) {
+                audio.volume = 0.2;
+            }
+        });
+    </script>
+</body>
+
+</html>
