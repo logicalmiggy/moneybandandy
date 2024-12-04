@@ -11,7 +11,7 @@
         /* Load Custom Fonts */
         @font-face {
             font-family: 'BodyFont';
-            src: url('body_font.ttf') format('truetype');
+            src: url('body_font.woff') format('woff');
         }
 
         @font-face {
@@ -85,7 +85,8 @@
 
         /* Navigation Section */
         .nav-section {
-            width: 800px;
+            width: 90%;
+            max-width: 800px;
             margin: 20px auto;
             padding: 15px;
             background-color: rgba(0, 0, 0, 0.85);
@@ -113,7 +114,8 @@
 
         /* About Me Section */
         .about-section {
-            width: 800px;
+            width: 90%;
+            max-width: 800px;
             margin: 20px auto;
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.85);
@@ -129,7 +131,8 @@
 
         /* Blog Posts Section */
         .post-section {
-            width: 800px;
+            width: 90%;
+            max-width: 800px;
             margin: 20px auto;
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.85);
@@ -153,7 +156,8 @@
 
         /* Footer */
         .footer {
-            width: 800px;
+            width: 90%;
+            max-width: 800px;
             text-align: center;
             padding: 20px;
             margin: 20px auto;
@@ -185,6 +189,32 @@
             top: 20px;
             right: 20px;
             z-index: 1000;
+        }
+
+        /* Media Queries for Mobile Responsiveness */
+        @media (max-width: 600px) {
+            .page-header {
+                font-size: 48px;
+            }
+
+            .profile-picture-section img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .nav-link {
+                margin: 5px;
+                padding: 8px;
+                font-size: 12px;
+            }
+
+            .post-title {
+                font-size: 20px;
+            }
+
+            .post-content {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -275,4 +305,3 @@
 </body>
 
 </html>
-
