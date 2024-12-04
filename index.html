@@ -215,6 +215,60 @@
             .post-content {
                 font-size: 14px;
             }
+
+            /* Adjust Winamp player to bar style */
+            media-theme-winamp {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 50px; /* Smaller height to make it bar-like */
+                z-index: 1000;
+                overflow: hidden; /* Hide anything that overflows the bounds */
+                background-color: black; /* To blend in with the site's theme */
+            }
+        }
+
+        /* Custom Player Bar for Mobile */
+        .custom-player-bar {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            .custom-player-bar {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 50px;
+                background-color: black;
+                color: #00ff00;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 1000;
+                border-top: 2px solid #00ff00;
+            }
+
+            .custom-player-bar button {
+                background: none;
+                border: 1px solid #00ff00;
+                color: #00ff00;
+                padding: 10px;
+                margin: 5px;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+
+            .custom-player-bar button:hover {
+                background-color: #00ff00;
+                color: black;
+            }
+
+            /* Hide Winamp on mobile */
+            media-theme-winamp {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -284,6 +338,12 @@
         ></audio>
     </media-theme-winamp>
 
+    <!-- Custom Player Bar for Mobile -->
+    <div class="custom-player-bar">
+        <button onclick="playAudio()">Play</button>
+        <button onclick="pauseAudio()">Pause</button>
+    </div>
+
     <!-- JavaScript for Copy Functionality and Audio Volume -->
     <script>
         function copyToClipboard(text) {
@@ -301,6 +361,21 @@
                 audio.volume = 0.2;
             }
         });
+
+        // Custom player controls
+        function playAudio() {
+            const audio = document.getElementById('background-audio');
+            if (audio) {
+                audio.play();
+            }
+        }
+
+        function pauseAudio() {
+            const audio = document.getElementById('background-audio');
+            if (audio) {
+                audio.pause();
+            }
+        }
     </script>
 </body>
 
